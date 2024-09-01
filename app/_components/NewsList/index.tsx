@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Category from "../Category";
+import Data from "../Data";
 import { News } from "@/app/_libs/microcms";
 
 type Props = {
@@ -18,8 +20,8 @@ export default function NewsList({ news }: Props) {
             <dl>
               <dt>{article.title}</dt>
               <dd>
-                {article.category.name}
-                {article.publishedAt}
+                <Category category={article.category} />
+                <Data data={article.publishedAt ?? article.createdAt} />
               </dd>
             </dl>
           </div>
