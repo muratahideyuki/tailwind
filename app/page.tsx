@@ -2,16 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-
-type News = {
-  id: string;
-  title: string;
-  category: {
-    name: string;
-  };
-  publishedAt: string;
-  createdAt: string;
-};
+import NewsList from "@/app/_components/NewsList";
+import ButtonLink from "@/app/_components/ButtonLink";
+import { News } from "@/app/_libs/microcms";
 
 const data: { contents: News[] } = {
   contents: [
@@ -142,24 +135,15 @@ export default function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <div className="bg-gray-200 p-4">1つ目のカラム</div>
-              <div className="bg-gray-200 p-4">2つ目のカラム</div>
+              <div className="bg-gray-200 p-4">2つs目のカラム</div>
               <div className="bg-gray-200 p-4">3つa目のカラム</div>
             </div>
 
             <section className="mb-5">
-              <ul>
-                {sliceData.map((article) => (
-                  <li key={article.id} className="mb-4">
-                    <dl>
-                      <dt className="font-bold">{article.title}</dt>
-                      <dd>
-                        {article.category.name}
-                        {article.publishedAt}
-                      </dd>
-                    </dl>
-                  </li>
-                ))}
-              </ul>
+              <NewsList news={sliceData} />
+              <div>
+                <ButtonLink href="/news">もっとみる</ButtonLink>
+              </div>
             </section>
           </main>
         </div>
