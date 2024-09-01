@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer>
       <nav>
         <ul>
           <li>
-            <a href="/news">ニュース</a>
+            <Link href="/news">ニュース</Link>
           </li>
         </ul>
       </nav>
