@@ -17,7 +17,16 @@ export default function NewsList({ news }: Props) {
       {news.map((article) => (
         <li key={article.id}>
           <Link href={`/news/{article.id}`}>
-            <Image src="/aa.jpg" alt="no" width={200} height={100} />
+            {article.thumbnail ? (
+              <Image
+                src={article.thumbnail.url}
+                alt=""
+                width={article.thumbnail.width}
+                height={article.thumbnail.height}
+              />
+            ) : (
+              <Image src="/no-image.png" alt="no" width={1200} height={630} />
+            )}
             <dl>
               <dt>{article.title}</dt>
               <dd>
