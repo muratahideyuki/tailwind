@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Category from "../Category";
-import Data from "../Data";
+import Date from "../Date";
 import { News } from "@/app/_libs/microcms";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export default function NewsList({ news }: Props) {
     <ul>
       {news.map((article) => (
         <li key={article.id}>
-          <Link href={`/news/{article.id}`}>
+          <Link href={`/news/${article.id}`}>
             {article.thumbnail ? (
               <Image
                 src={article.thumbnail.url}
@@ -31,7 +31,7 @@ export default function NewsList({ news }: Props) {
               <dt>{article.title}</dt>
               <dd>
                 <Category category={article.category} />
-                <Data data={article.publishedAt ?? article.createdAt} />
+                <Date date={article.publishedAt ?? article.createdAt} />
               </dd>
             </dl>
           </Link>

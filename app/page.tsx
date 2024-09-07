@@ -11,6 +11,8 @@ export default async function Home() {
     limit: TOP_NEWS_LIMIT,
   });
 
+  console.log(data.contents); // デバッグ用
+
   return (
     <>
       <div>
