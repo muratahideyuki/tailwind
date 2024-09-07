@@ -1,8 +1,23 @@
 import Image from "next/image";
-import { getGalleryList } from "@/app/_libs/microcms";
+import { getMemberList } from "@/app/_libs/microcms";
 
-export default async function Page() {
-  const data = await getGalleryList();
+const data = {
+  contents: [
+    {
+      id: "1",
+      image: {
+        url: "/aa.jpg",
+        width: 200,
+        height: 200,
+      },
+      name: "だびっと",
+      position: "ceo",
+      profile:
+        "ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
+    },
+  ],
+};
+export default function Page() {
   return (
     <div>
       {data.contents.length === 0 ? (
