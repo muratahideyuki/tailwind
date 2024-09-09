@@ -25,7 +25,7 @@ export default function NewsList({ news }: Props) {
                 height={article.thumbnail.height}
               />
             ) : (
-              <Image src="/no-image.png" alt="no" width={1200} height={630} />
+              <Image src="/no-image.jpg" alt="no" width={400} height={630} />
             )}
             <dl>
               <dt>{article.title}</dt>

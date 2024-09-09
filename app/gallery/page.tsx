@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getGalleryList } from "@/app/_libs/microcms";
-import { GALLERY_LIST_LIMIT } from "@/app/_components/_constants";
+import { GALLERY_LIST_LIMIT } from "@/app/_constants";
 
 export default async function Page() {
   const data = await getGalleryList({ limit: GALLERY_LIST_LIMIT });
