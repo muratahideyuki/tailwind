@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
@@ -61,24 +62,19 @@ export default function HamburgerMenu() {
       >
         <ul className="flex flex-col p-4 space-y-4">
           <li>
-            <a href="#" className="text-gray-800">
+            <Link href="/" className="text-gray-800">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-gray-800">
-              About
-            </a>
+            <Link href="/gallery" className="text-gray-800">
+              Gallery
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-gray-800">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-800">
+            <Link href="/contact" className="text-gray-800">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

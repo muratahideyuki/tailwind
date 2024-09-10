@@ -13,9 +13,9 @@ export default function NewsList({ news }: Props) {
     return <p>記事がない</p>;
   }
   return (
-    <ul>
+    <ul className="grid grid-cols-1 gap-5 md:grid-cols-3">
       {news.map((article) => (
-        <li key={article.id}>
+        <li key={article.id} className="">
           <Link href={`/news/${article.id}`}>
             {article.thumbnail ? (
               <Image
@@ -25,7 +25,13 @@ export default function NewsList({ news }: Props) {
                 height={article.thumbnail.height}
               />
             ) : (
-              <Image src="/no-image.jpg" alt="no" width={400} height={630} />
+              <Image
+                src="/no-image.jpg"
+                alt="no"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+              />
             )}
             <dl>
               <dt>{article.title}</dt>
