@@ -4,6 +4,9 @@ import { GALLERY_LIST_LIMIT } from "@/app/_constants";
 
 export default async function Page() {
   const data = await getGalleryList({ limit: GALLERY_LIST_LIMIT });
+
+  console.log(data.contents);
+
   return (
     <div>
       {data.contents.length === 0 ? (
