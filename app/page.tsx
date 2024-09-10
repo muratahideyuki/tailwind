@@ -32,12 +32,6 @@ export default async function Home() {
               />
             </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              <div className="bg-gray-200 p-4">1つ目のカラム</div>
-              <div className="bg-gray-200 p-4">2つ目のカラム</div>
-              <div className="bg-gray-200 p-4">3つs目のカラム</div>
-            </div>
-
             <section className="mb-5">
               <NewsList news={data.contents} />
               <div>

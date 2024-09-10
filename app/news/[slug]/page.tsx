@@ -3,7 +3,7 @@ import { getNewsDetail } from "@/app/_libs/microcms";
 import Article from "@/app/_components/Article";
 import ButtonLink from "@/app/_components/ButtonLink";
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 type Props = {
   params: {
