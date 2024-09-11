@@ -1,5 +1,3 @@
-//"use client"; // クライアントコンポーネントとして宣言
-
 import Image from "next/image";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
@@ -14,16 +12,13 @@ export default async function Home() {
     limit: TOP_NEWS_LIMIT,
   });
 
-  console.log(data.contents); // デバッグ用
-
   return (
     <>
       <div>
         <div className="container mx-auto px-3">
-          {/* ここ以下はメインビジュアル用のコード */}
           <main>
             <h3 className="text-9xl blur-md">SURF ART</h3>
-            <h3 className="text-9xl blur-md mb-3">OIL PAINT</h3>
+            <h3 className="text-9xl blur-md mb-4">OIL PAINT</h3>
             <section className=" min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden  py-36 md:py-60 xl:py-80 mb-5 z-1">
               <Image
                 src="/aa.jpg"

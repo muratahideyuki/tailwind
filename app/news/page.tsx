@@ -9,6 +9,8 @@ export default async function Page() {
   });
   return (
     <>
+      <h3 className="text-9xl blur-md mb-6">GALLERY</h3>
+
       <NewsList news={news} />
       <Pagination totalCount={totalCount} />
     </>

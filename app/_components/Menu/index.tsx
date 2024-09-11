@@ -67,7 +67,7 @@ export default function HamburgerMenu() {
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="text-gray-800">
+            <Link href="/news" className="text-gray-800">
               Gallery
             </Link>
           </li>

@@ -13,31 +13,41 @@ export default function NewsList({ news }: Props) {
     return <p>記事がない</p>;
   }
   return (
-    <ul className="grid grid-cols-1 gap-5 md:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 mb-8">
       {news.map((article) => (
-        <li key={article.id} className="">
+        <li key={article.id} className="mb-8">
           <Link href={`/news/${article.id}`}>
             {article.thumbnail ? (
               <Image
                 src={article.thumbnail.url}
                 alt=""
-                width={article.thumbnail.width}
-                height={article.thumbnail.height}
+                width={400}
+                height={300} // 固定高さ
+                className="mb-4 h-52 w-full object-cover"
               />
             ) : (
               <Image
                 src="/no-image.jpg"
                 alt="no"
                 width={400}
-                height={300}
-                className="w-full h-auto"
+                height={300} // 固定高さ
+                className="mb-4 h-52 w-full object-cover"
               />
             )}
             <dl>
-              <dt>{article.title}</dt>
+              <dt>タイトル：{article.title}</dt>
               <dd>
                 <Category category={article.category} />
+                <br />
                 <Date date={article.publishedAt ?? article.createdAt} />
+                <p>
+                  <button
+                    role="link"
+                    className="text-sm relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:scale-x-100 after:bg-neutral-800 after:transition-transform after:duration-150 after:ease-in-out hover:after:origin-bottom-right hover:after:scale-x-0"
+                  >
+                    詳しくはこちら
+                  </button>
+                </p>
               </dd>
             </dl>
           </Link>
