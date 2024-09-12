@@ -14,7 +14,7 @@ export default async function Page({ params }: Props) {
     <>
       <Article data={data} />
       <div>
-        <ButtonLink href="/news">ニュース一覧へ</ButtonLink>
+        <ButtonLink href="/works">ワークスニュース一覧へ</ButtonLink>
       </div>
     </>
   );

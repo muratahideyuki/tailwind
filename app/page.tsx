@@ -32,7 +32,7 @@ export default async function Home() {
             <section className="mb-5">
               <NewsList news={data.contents} />
               <div>
-                <ButtonLink href="/news">もっとみる</ButtonLink>
+                <ButtonLink href="/works">もっとみる</ButtonLink>
               </div>
             </section>
             <ScrollToTop />

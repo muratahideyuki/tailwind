@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa"; // Instagramアイコンをインポート
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -23,14 +23,15 @@ export default function Footer() {
           </ul>
           <div className="flex items-center space-x-2">
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/ranapaint/"
               aria-label="Instagram"
-              className="text-black hover:text-gray-700"
+              className="text-black hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaInstagram size={24} /> {/* アイコンをクリック可能に */}
+              <FaInstagram size={24} />
             </Link>
             <span className="text-black">Follow me</span>{" "}
-            {/* アイコンとテキストを分ける */}
           </div>
         </div>
       </div>

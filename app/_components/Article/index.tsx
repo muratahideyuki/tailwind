@@ -14,7 +14,7 @@ export default function Article({ data }: Props) {
       <h1>{data.title}</h1>
       <p>{data.description}</p>
       <div>
-        <Link href={`/news/category/${data.category.id}`}>
+        <Link href={`/works/category/${data.category.id}`}>
           <Category category={data.category} />
         </Link>
         <Date date={data.publishedAt ?? data.createdAt} />
