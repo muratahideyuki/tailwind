@@ -23,6 +23,13 @@ export default function HamburgerMenu() {
     }
   };
 
+  const handleLinkClick = (event: React.MouseEvent) => {
+    // メニューを閉じるためにフレームがリクエストされた後でリンク遷移を行う
+    requestAnimationFrame(() => {
+      setOpen(false);
+    });
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -62,17 +69,25 @@ export default function HamburgerMenu() {
       >
         <ul className="flex flex-col p-4 space-y-4">
           <li>
-            <Link href="/" className="text-gray-800">
+            <Link href="/" className="text-gray-800" onClick={handleLinkClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/news" className="text-gray-800">
-              Gallery
+            <Link
+              href="/works"
+              className="text-gray-800"
+              onClick={handleLinkClick}
+            >
+              Works
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-800">
+            <Link
+              href="/contact"
+              className="text-gray-800"
+              onClick={handleLinkClick}
+            >
               Contact
             </Link>
           </li>

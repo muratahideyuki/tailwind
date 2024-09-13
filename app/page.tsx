@@ -19,7 +19,7 @@ export default async function Home() {
           <main>
             <h3 className="text-9xl blur-md">SURF ART</h3>
             <h3 className="text-9xl blur-md mb-4">OIL PAINT</h3>
-            <section className=" min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden  py-36 md:py-60 xl:py-80 mb-5 z-1">
+            <section className="relative flex flex-1 shrink-0 items-center justify-center overflow-hidden py-10 md:py-60 xl:py-80 mb-10 z-1 min-h-[200px] md:min-h-[500px]">
               <Image
                 src="/aa.jpg"
                 alt="RANA PAINT"

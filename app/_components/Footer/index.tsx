@@ -11,8 +11,8 @@ export default function Footer() {
           </Link>
           <ul className="mb-5 mt-5">
             <li>
-              <Link href="/gallery" className="text-black  hover:text-gray-400">
-                Gallery
+              <Link href="/works" className="text-black  hover:text-gray-400">
+                Works
               </Link>
             </li>
             <li>
