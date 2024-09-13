@@ -11,9 +11,7 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useFormState(createContactData, initialState);
   console.log(state);
-  const handleSubmit = () => {
-    sendGAEvent({ event: "contact", value: "submit" });
-  };
+
   if (state.status === "success") {
     return (
       <p className="text-center text-green-500 font-semibold">
@@ -23,11 +21,15 @@ export default function ContactForm() {
       </p>
     );
   }
+
   return (
     <form
       className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg"
       action={formAction}
-      onSubmit={handleSubmit}
+      onSubmit={(event) => {
+        event.preventDefault();
+        formAction(event.currentTarget);
+      }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
         <div>
