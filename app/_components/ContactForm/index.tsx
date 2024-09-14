@@ -11,25 +11,13 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useFormState(createContactData, initialState);
   console.log(state);
-
   if (state.status === "success") {
-    return (
-      <p className="text-center text-green-500 font-semibold">
-        お問い合わせいただき、ありがとうございます。
-        <br />
-        お返事まで今しばらくお待ちください。
-      </p>
-    );
+    return <p>ありがとう</p>;
   }
-
   return (
     <form
       className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg"
       action={formAction}
-      onSubmit={(event) => {
-        event.preventDefault();
-        formAction(event.currentTarget);
-      }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
         <div>
@@ -99,14 +87,11 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          rows={4}
           className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
       <div>
-        {state.status === "error" && (
-          <p className="text-red-500 mb-4">{state.message}</p>
-        )}
+        {state.status === "error" && <p>{state.message}</p>}
         <input
           type="submit"
           value="送信する"
