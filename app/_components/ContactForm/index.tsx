@@ -15,15 +15,12 @@ export default function ContactForm() {
     return <p>ありがとう</p>;
   }
   return (
-    <form
-      className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg"
-      action={formAction}
-    >
+    <form className="max-w-lg mx-auto p-8" action={formAction}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
         <div>
           <label
             htmlFor="lastname"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
           >
             姓
           </label>
@@ -31,13 +28,13 @@ export default function ContactForm() {
             type="text"
             id="lastname"
             name="lastname"
-            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300"
           />
         </div>
         <div>
           <label
             htmlFor="firstname"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
           >
             名
           </label>
@@ -45,14 +42,14 @@ export default function ContactForm() {
             type="text"
             id="firstname"
             name="firstname"
-            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300"
           />
         </div>
       </div>
       <div className="mb-6">
         <label
           htmlFor="company"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
           会社名
         </label>
@@ -60,13 +57,13 @@ export default function ContactForm() {
           type="text"
           id="company"
           name="company"
-          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300"
         />
       </div>
       <div className="mb-6">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
           メールアドレス
         </label>
@@ -74,20 +71,20 @@ export default function ContactForm() {
           type="text"
           id="email"
           name="email"
-          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300"
         />
       </div>
       <div className="mb-6">
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
           メッセージ
         </label>
         <textarea
           id="message"
           name="message"
-          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300"
         />
       </div>
       <div>
@@ -95,7 +92,7 @@ export default function ContactForm() {
         <input
           type="submit"
           value="送信する"
-          className="w-full p-3 bg-blue-500 text-white font-bold rounded hover:bg-blue-600 transition-colors duration-300 cursor-pointer"
+          className="w-full p-3 bg-blue-500 text-white font-bold rounded hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 transition-colors duration-300 cursor-pointer"
         />
       </div>
     </form>
