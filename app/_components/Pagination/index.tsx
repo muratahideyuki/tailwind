@@ -18,7 +18,7 @@ export default function Pagination({
   );
 
   return (
-    <nav className="flex justify-center mt-4">
+    <nav className="flex justify-center mt-4 mb-5">
       <ul className="flex space-x-2">
         {pages.map((p) => (
           <li key={p}>

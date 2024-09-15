@@ -12,9 +12,11 @@ export default async function Page({ params }: Props) {
   const data = await getNewsDetail(params.slug).catch(notFound);
   return (
     <>
-      <Article data={data} />
-      <div>
-        <ButtonLink href="/works">ワークスニュース一覧へ</ButtonLink>
+      <div className="mb-4">
+        <Article data={data} />
+      </div>
+      <div className="mb-5">
+        <ButtonLink href="/works">Works一覧</ButtonLink>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { getNewsList } from "@/app/_libs/microcms";
 import NewsList from "../_components/NewsList";
 import Pagination from "@/app/_components/Pagination";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
+import ScrollToTop from "@/app/_components/ScrollToTop";
 
 export default async function Page() {
   const { contents: news, totalCount } = await getNewsList({
@@ -13,6 +14,7 @@ export default async function Page() {
 
       <NewsList news={news} />
       <Pagination totalCount={totalCount} />
+      <ScrollToTop />
     </>
   );
 }
