@@ -1,14 +1,26 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "RANA PAINT　ラナペイント",
-  description: "油絵のサーフアート。",
+  metadataBase: new URL("http://localhost:3000"),
+  title: {
+    template: "%s | SURFART | RANA PAINT",
+    default: "SURFART | RANA PAINT",
+  },
+  description: "油絵のサーフアートを描いてます",
+  openGraph: {
+    title: " SURFART | RANA PAINT",
+    description: "SURFART | RANA PAINT",
+    images: ["/ogp.png"],
+  },
+  alternates: {
+    canonical: "http://localhost:3000",
+  },
 };
 
 export default function RootLayout({
