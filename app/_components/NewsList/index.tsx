@@ -23,7 +23,7 @@ export default function NewsList({ news }: Props) {
                 alt=""
                 width={400}
                 height={300} // 固定高さ
-                className="mb-4 h-52 w-full object-cover"
+                className="mb-4 h-52 w-full object-cover transition-opacity duration-300 hover:opacity-80"
               />
             ) : (
               <Image
@@ -31,7 +31,7 @@ export default function NewsList({ news }: Props) {
                 alt="no"
                 width={400}
                 height={300} // 固定高さ
-                className="mb-4 h-52 w-full object-cover"
+                className="mb-4 h-52 w-full object-cover transition-opacity duration-300 hover:opacity-80"
               />
             )}
             <dl>

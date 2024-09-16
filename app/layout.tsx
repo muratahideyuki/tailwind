@@ -8,7 +8,7 @@ import Footer from "./_components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://ranapaint.vercel.app"),
   title: {
     template: "%s | SURFART | RANA PAINT",
     default: "SURFART | RANA PAINT",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: ["/ogp.png"],
   },
   alternates: {
-    canonical: "http://localhost:3000",
+    canonical: "https://ranapaint.vercel.app",
   },
 };
 
