@@ -29,7 +29,6 @@ export default async function Home() {
               </span>
             </h3>
 
-            {/* SwiperComponentの使用 */}
             <SwiperComponent />
 
             <section>
