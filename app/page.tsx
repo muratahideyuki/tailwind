@@ -4,6 +4,7 @@ import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "@/app/_components/ButtonLink";
 import ScrollToTop from "@/app/_components/ScrollToTop";
+import SwiperComponent from "@/app/_components/SwiperComponent"; // Swiperのインポート
 
 export const revalidate = 60;
 
@@ -17,20 +18,22 @@ export default async function Home() {
       <div>
         <div className="container mx-auto px-3">
           <main>
-            <h3 className="text-9xl blur-md">SURF ART</h3>
-            <h3 className="text-9xl blur-md mb-4">OIL PAINT</h3>
-            <section className="relative flex flex-1 shrink-0 items-center justify-center overflow-hidden py-10 md:py-60 xl:py-80 mb-10 z-1 min-h-[200px] md:min-h-[500px]">
-              <Image
-                src="/orange_big.jpg"
-                alt="RANA PAINT"
-                fill
-                style={{ objectFit: "cover" }}
-                className="rounded-2xl"
-              />
-            </section>
+            <h3 className="text-9xl blur-md">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-400 from-blue-900">
+                SURF ART
+              </span>
+            </h3>
+            <h3 className="text-9xl blur-md mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-indigo-600 from-violet-400">
+                OIL PAINT
+              </span>
+            </h3>
+
+            {/* SwiperComponentの使用 */}
+            <SwiperComponent />
 
             <section>
-              <div className=" py-6 sm:py-8 lg:py-12">
+              <div className="py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
                   <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
                     <div>
