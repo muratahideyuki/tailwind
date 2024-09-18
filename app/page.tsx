@@ -34,9 +34,9 @@ export default async function Home() {
             <section>
               <div className="py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-                  <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+                  <div className="grid gap-1 md:grid-cols-2 lg:gap-12">
                     <div>
-                      <div className="h-64 overflow-hidden rounded-lg  md:h-auto">
+                      <div className="overflow-hidden rounded-lg md:h-auto">
                         <Image
                           src="/kabe.jpg"
                           alt="surfart"
@@ -47,8 +47,8 @@ export default async function Home() {
                       </div>
                     </div>
 
-                    <div className="flex justify-center items-center md:pt-0">
-                      <h4 className="text-center text-lg sm:text-lg">
+                    <div className="flex justify-center items-center md:pt-0 pt-4">
+                      <h4 className="text-center text-sm sm:text-lg">
                         油絵のサーフアートを描いています
                         <br />
                         サーファーが想いを馳せる波を描いていきたいです
