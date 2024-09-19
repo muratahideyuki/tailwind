@@ -5,6 +5,7 @@ import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "@/app/_components/ButtonLink";
 import ScrollToTop from "@/app/_components/ScrollToTop";
 import SwiperComponent from "@/app/_components/SwiperComponent"; // Swiperのインポート
+import Link from "next/link";
 
 export const revalidate = 60;
 
@@ -65,6 +66,23 @@ export default async function Home() {
                 <ButtonLink href="/works">もっとみる</ButtonLink>
               </div>
             </section>
+
+            <section>
+              <p className="text-center mb-11 mt-11">
+                このサイトはNEXT.JS+ヘッドレスCMS+TAILWINDで制作しました
+                <br />
+                WORDPRESSで制作したサイトは
+                <a
+                  href="https://ranapaint.rana-factory.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  こちら
+                </a>
+              </p>
+            </section>
+
             <ScrollToTop />
           </main>
         </div>
