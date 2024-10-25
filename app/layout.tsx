@@ -8,19 +8,19 @@ import Footer from "./_components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ranapaint.vercel.app"),
+  metadataBase: new URL("https://surf-photo.vercel.app/"),
   title: {
-    template: "%s | SURFART | RANA PAINT",
-    default: "SURFART | RANA PAINT",
+    template: "%s | surf photo",
+    default: "surf photo",
   },
-  description: "油絵のサーフアートを描いてます",
+  description: "surf photo",
   openGraph: {
-    title: " SURFART | RANA PAINT",
-    description: "SURFART | RANA PAINT",
+    title: " surf photo",
+    description: "surf photo",
     images: ["/ogp.png"],
   },
   alternates: {
-    canonical: "https://ranapaint.vercel.app",
+    canonical: "https://surf-photo.vercel.app/",
   },
 };
 
