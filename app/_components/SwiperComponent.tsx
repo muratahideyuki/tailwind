@@ -22,8 +22,8 @@ export default function SwiperComponent() {
       <SwiperSlide>
         <div className="rounded-2xl  flex justify-center items-center py-10 md:py-60 xl:py-80 mb-10 z-1 min-h-[200px] md:min-h-[500px] ">
           <Image
-            src="/top_01.jpg"
-            alt="RANA PAINT"
+            src="/p01.jpg"
+            alt=""
             fill
             style={{ objectFit: "cover" }}
             className="rounded-2xl"
@@ -33,8 +33,8 @@ export default function SwiperComponent() {
       <SwiperSlide>
         <div className="rounded-2xl  flex justify-center items-center py-10 md:py-60 xl:py-80 mb-10 z-1 min-h-[200px] md:min-h-[500px] ">
           <Image
-            src="/top_02.jpg"
-            alt="RANA PAINT"
+            src="/p02.jpg"
+            alt=""
             fill
             style={{ objectFit: "cover" }}
             className="rounded-2xl"
@@ -44,8 +44,8 @@ export default function SwiperComponent() {
       <SwiperSlide>
         <div className="rounded-2xl flex justify-center items-center py-10 md:py-60 xl:py-80 mb-10 z-1 min-h-[200px] md:min-h-[500px] ">
           <Image
-            src="/top_03.jpg"
-            alt="RANA PAINT"
+            src="/p03.jpg"
+            alt=""
             fill
             style={{ objectFit: "cover" }}
             className="rounded-2xl"

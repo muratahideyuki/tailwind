@@ -8,7 +8,7 @@ export default function Header() {
       <header className="flex justify-between items-center py-3 relative z-60">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <h1 className="text-3xl blur-sm">RANA PAINT</h1>
+            <h1 className="text-3xl blur-sm">surfing photo</h1>
           </Link>
         </div>
         <Menu />
