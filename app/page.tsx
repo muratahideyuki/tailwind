@@ -19,12 +19,12 @@ export default async function Home() {
       <div>
         <div className="container mx-auto px-3">
           <main>
-            <h3 className="text-9xl blur-md">
+            <h3 className="text-4xl blur-md">
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-400 from-blue-900">
                 SURF PHOTO
               </span>
             </h3>
-            <h3 className="text-9xl blur-md mb-4">
+            <h3 className="text-4xl blur-md mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-indigo-600 from-violet-400">
                 D500
               </span>
